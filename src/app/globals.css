@@ -1,27 +1,30 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Adineue-Pro";
+  src: url("./fonts//Adineue/adineue-pro.otf");
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Minecraft";
+  src: url("./fonts/Minecraft/Minecraft-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
 }
 
-html,
+@font-face {
+  font-family: "Aeonik";
+  src: url("./fonts/Aeonik/AeonikTRIAL-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  font-family: "Aeonik", sans-serif;
+  color: "white";
+  background: "#0d0d0f";
 }
 
 * {
@@ -35,8 +38,18 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.scroll-hero-text {
+  -webkit-text-stroke: 1px#1a1d01;
+}
+
+.mode-hero-text {
+  -webkit-text-stroke: 1px #1a1d01;
+}
+
+.wide-full {
+  width: calc(100% + 2px);
+}
+
+html {
+  scroll-behavior: smooth;
 }
