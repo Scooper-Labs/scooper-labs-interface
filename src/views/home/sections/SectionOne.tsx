@@ -21,7 +21,7 @@ const SectionOne = () => {
       bg={"url('/img/perspective-2.png')"}
       bgColor={"blue"}
       bgRepeat={"no-repeat"}
-      bgSize={"cover"}
+      bgSize={"contain"}
       alignItems="center"
       justifyContent="center"
       flexDir="column"
@@ -44,7 +44,7 @@ const SectionOne = () => {
           bg="#002EE9"
           color={"white"}
           fontWeight={400}
-          fontSize="124px"
+          fontSize={{ base: "124px", md: "60px", lg: "124px" }}
           fontFamily="Adineue-pro"
           textAlign="left"
         >
@@ -54,7 +54,7 @@ const SectionOne = () => {
 
       <Box
         pos={"relative"}
-        top={"18rem"}
+        top={{ base: "18rem", md: "10rem", lg: "18rem" }}
         // mb={"10rem"}
         marginLeft={"auto"}
         w={"100%"}
