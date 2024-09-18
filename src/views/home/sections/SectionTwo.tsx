@@ -23,91 +23,93 @@ const SectionTwo = () => {
       flexDir="column"
       color="#0D0D0F"
       py="10px"
-      px="10px"
+      px="80px"
       pt=""
     >
-      <ContainerWrapper>
-        <Flex
-          as="div"
-          flexDir="column"
-          alignItems="flex-start"
+      {/* <ContainerWrapper> */}
+      <Flex
+        as="div"
+        flexDir="column"
+        alignItems="flex-start"
+        textAlign="left"
+        width={"100%"}
+        gap={24}
+      >
+        <Heading
+          color="#002EE9"
+          fontWeight={400}
+          fontSize="124px"
+          fontFamily="Adineue-pro"
           textAlign="left"
         >
-          <Heading
-            color="#002EE9"
-            fontWeight={400}
-            fontSize="124px"
-            fontFamily="Adineue-pro"
-            textAlign="left"
-          >
-            Our Products
-          </Heading>
+          Our Products
+        </Heading>
 
-          <Box className="space-y-8">
-            <Flex direction={"row"} wrap={"nowrap"} gap={8}>
-              <Box position="relative" className="grow shrink-0">
-                <Image
-                  src="/img/asset-scooper-product.png"
-                  alt="Asset scooper product"
-                  objectFit="cover"
-                  width="100"
-                  height="100%"
-                  borderRadius={"10px"}
-                  // transform={"rotateX(-30.34deg)"}
-                />
-                <Box className="space-y-4">
-                  <Text color="#002EE9" fontWeight={"bold"} fontSize={"36px"}>
-                    AssetScooper
-                  </Text>
-                  <Text color="#002EE9" fontWeight={"normal"} fontSize={"16px"}>
-                    Aggregate and sweep multiple assets in a single transaction.
-                  </Text>
-                </Box>
+        <Box className="space-y-8" width={"inherit"}>
+          <Flex direction={"row"} wrap={"nowrap"} gap={8}>
+            <Box position="relative" className="" flexGrow={"1"}>
+              <Image
+                src="/img/asset-scooper-product.png"
+                alt="Asset scooper product"
+                objectFit="cover"
+                width="100%"
+                // height="100%"
+                borderRadius={"10px"}
+                // transform={"rotateX(-30.34deg)"}
+              />
+              <Box className="space-y-4">
+                <Text color="#002EE9" fontWeight={"bold"} fontSize={"36px"}>
+                  AssetScooper
+                </Text>
+                <Text color="#002EE9" fontWeight={"normal"} fontSize={"16px"}>
+                  Aggregate and sweep multiple assets in a single transaction.
+                </Text>
               </Box>
-              <Box position="relative" className="grow shrink-0">
-                <Image
-                  src="/img/blockrepo-product.png"
-                  alt="Asset scooper product"
-                  objectFit="cover"
-                  width="100"
-                  height="100%"
-                  borderRadius={"10px"}
-                  // transform={"rotateX(-30.34deg)"}
-                />
-                <Box className="space-y-4">
-                  <Text color="#002EE9" fontWeight={"bold"} fontSize={"36px"}>
-                    BaseRepo
-                  </Text>
-                  <Text color="#002EE9" fontWeight={"normal"} fontSize={"16px"}>
-                    Bringing 10,000 developers into the base ecosystem
-                  </Text>
-                </Box>
+            </Box>
+            <Box position="relative" className="" flexGrow={"1"}>
+              <Image
+                src="/img/blockrepo-product.png"
+                alt="Base repo product"
+                objectFit="cover"
+                width="100%"
+                // height="100%"
+                borderRadius={"10px"}
+                // transform={"rotateX(-30.34deg)"}
+              />
+              <Box className="space-y-4">
+                <Text color="#002EE9" fontWeight={"bold"} fontSize={"36px"}>
+                  BaseRepo
+                </Text>
+                <Text color="#002EE9" fontWeight={"normal"} fontSize={"16px"}>
+                  Bringing 10,000 developers into the base ecosystem
+                </Text>
               </Box>
-            </Flex>
-            <Flex
-              direction={"row"}
-              wrap={"nowrap"}
-              gap={8}
-              mt={"10rem"}
-              pr={"2rem"}
-            >
-              <Box width={"50%"}>
-                <Box
-                  width={"100%"}
-                  height={"474px"}
-                  border={"2px dashed blue"}
-                  borderRadius={"10px"}
-                ></Box>
-                <Box className="space-y-4">
-                  <Text color="#002EE9" fontWeight={"bold"} fontSize={"36px"}>
-                    Coming Soon
-                  </Text>
-                </Box>
+            </Box>
+          </Flex>
+          <Flex
+            direction={"row"}
+            wrap={"nowrap"}
+            gap={8}
+            mt={"10rem"}
+            pr={"2rem"}
+          >
+            <Box width={"50%"}>
+              <Box
+                width={"100%"}
+                height={"474px"}
+                border={"2px dashed blue"}
+                borderRadius={"10px"}
+              ></Box>
+              <Box className="space-y-4">
+                <Text color="#002EE9" fontWeight={"bold"} fontSize={"36px"}>
+                  Coming Soon
+                </Text>
               </Box>
-            </Flex>
-          </Box>
-        </Flex>
-      </ContainerWrapper>
+            </Box>
+          </Flex>
+        </Box>
+      </Flex>
+      {/* </ContainerWrapper> */}
 
       {/* -------------------- Fixed Bottom Image ---------------------- */}
       <Box mt="200px" marginLeft={"auto"}>

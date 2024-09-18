@@ -72,10 +72,13 @@ const LandingHeader = () => {
                 py={2}
                 fontWeight={500}
                 fontSize="16px"
-                color="white"
+                bg={"white"}
+                bgClip={"text"}
+                color="transparent"
                 // blendMode="difference"
-                mixBlendMode="difference"
-                filter={"hue-rotate(90deg)"}
+                // mixBlendMode="difference"
+                bgBlendMode={"difference"}
+                // filter={"hue-rotate(90deg)"}
                 style={{ textDecoration: "none" }}
               >
                 {name}
