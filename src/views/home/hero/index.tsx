@@ -24,6 +24,33 @@ const HeroSection = () => {
       py="10px"
       px="10px"
     >
+      {/* Top Left Cube */}
+      <Box pos={"absolute"} top={0} left={0}>
+        <Image
+          src="/img/section-one/top-left-cube.svg"
+          w={"inherit"}
+          alt="top right cube"
+        />
+      </Box>
+
+      {/* Top Right Cube */}
+      <Box pos={"absolute"} top={0} right={0}>
+        <Image
+          src="/img/section-one/top-right-cube.svg"
+          w={"inherit"}
+          alt="top left cube"
+        />
+      </Box>
+
+      {/* Home Page Cyan Lines */}
+      <Box pos={"absolute"} bottom={0} width={"100%"}>
+        <Image
+          src="/img/section-one-lines.svg"
+          w={"inherit"}
+          alt="asset scooper lines"
+        />
+      </Box>
+
       <ContainerWrapper>
         <Flex
           as="div"
@@ -31,7 +58,11 @@ const HeroSection = () => {
           alignItems="center"
           justifyContent="center"
           textAlign="center"
+          pos={"relative"}
         >
+          <Box pos={"absolute"} top={-40}>
+            <Image src="/img/section-one/stars.svg" w={"inherit"} alt="stars" />
+          </Box>
           {/* ----------------------- Scooper Labs Logo ----------------------- */}
           <Box>
             <Image
