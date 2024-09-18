@@ -16,16 +16,46 @@ const Menu = ({ menuOpen, setMenuOpen, links }: MenuProps) => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "100%" }}
           position="absolute"
-          top="110%"
+          top="0"
           right="0"
           width="100%"
           h="100vh"
-          bg="brandScooper.200"
-          // pt="8"
+          bg="#0D0D0F"
           zIndex={9999}
           display="flex"
           flexDirection="column"
         >
+          {/* ----------------------- Side-Img-illustration ---------------------- */}
+
+          <Box position="absolute" top="0" left="0">
+            <Image
+              src="/img/drawer-side-lines.png"
+              alt="side illustration"
+              objectFit="cover"
+            />
+          </Box>
+
+          {/* --------------------- To-the-Top (Mobile screen***** 390px) --------------------- */}
+          <Box position="absolute" top="0" left="10" zIndex={-1}>
+            <Image
+              src="/img/top-left-cube-side.png"
+              alt="top cube illustration"
+              objectFit="cover"
+              width="157.5px"
+              height="86.25px"
+            />
+          </Box>
+
+          {/* --------------------- To-the-Bottom (Mobile screen***** 390px) --------------------- */}
+          <Box position="absolute" bottom="0" zIndex={-1}>
+            <Image
+              src="/img/bottom-left-cube.png"
+              alt="bottom cube illustration"
+              objectFit="inherit"
+              width="157.5px"
+            />
+          </Box>
+
           <Box
             display="flex"
             flexDirection="column"

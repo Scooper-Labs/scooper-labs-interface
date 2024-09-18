@@ -21,10 +21,74 @@ const HeroSection = () => {
       minH="100vh"
       flexDir="column"
       color="white"
-      py="10px"
-      px="10px"
+      pt={{ base: "125px", md: "135px", lg: "135px" }}
     >
-      <ContainerWrapper>
+      {/* ------------ Top Ilustation is here ---------------- */}
+      <Box>
+        {/* --------------------- To-the-Left --------------------- */}
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          display={["none", "none", "none", "block", "block", "block", "block"]}
+        >
+          <Image
+            src="/img/top-left-cube.png"
+            alt="left-cube illustration"
+            objectFit="cover"
+            width="210px"
+          />
+        </Box>
+
+        {/* --------------------- To-the-Left (Mobile screen***** 390px) --------------------- */}
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          display={["block", "block", "block", "none", "none", "none", "none"]}
+        >
+          <Image
+            src="/img/top-left-cube.png"
+            alt="left-cube illustration"
+            objectFit="cover"
+            width="157.5px"
+            height="86.25px"
+          />
+        </Box>
+
+        {/* --------------------- To-the-Right --------------------- */}
+        <Box
+          position="absolute"
+          top="0"
+          right="0"
+          display={["none", "none", "none", "block", "block", "block", "block"]}
+        >
+          <Image
+            src="/img/top_right-light-green-cube.png"
+            alt="green-cube illustration"
+            objectFit="cover"
+            width="210px"
+          />
+        </Box>
+
+        {/* --------------------- To-the-Left (Mobile screen***** 390px) --------------------- */}
+        <Box
+          position="absolute"
+          top="28"
+          right="0"
+          display={["block", "block", "block", "none", "none", "none", "none"]}
+        >
+          <Image
+            src="/img/top-right-cube.png"
+            alt="green-cube illustration"
+            objectFit="inherit"
+            width="157.5px"
+            height="130.47px"
+          />
+        </Box>
+      </Box>
+
+      <ContainerWrapper px="5%">
         <Flex
           as="div"
           flexDir="column"
@@ -46,7 +110,11 @@ const HeroSection = () => {
           </Text>
 
           {/* -------------------- Scooper Labs Products ---------------------- */}
-          <HStack gap={5} mt="32px">
+          <HStack
+            gap={5}
+            mt="32px"
+            mb={["150px", "150px", "150px", "192px", "192px", "192px"]}
+          >
             {scooperProductsLogos.map((logo, i) => (
               <Box key={i} w="60px" h="60px">
                 {logo.src ? (
@@ -69,17 +137,43 @@ const HeroSection = () => {
       </ContainerWrapper>
 
       {/* -------------------- Fixed Bottom Image ---------------------- */}
-      {/* <Image
-        src="/img/hero-bottom_lines.png"
-        alt="bottom lines-image"
-        position="fixed"
+      <Box
+        position="absolute"
         bottom="0"
-        left="0"
-        width="100%"
-        zIndex={-1}
-        objectFit="cover"
-        mt="200px"
-      /> */}
+        display={["none", "none", "none", "block", "block", "block"]}
+      >
+        <Image
+          src="/img/hero-bottom_lines.png"
+          alt="bottom lines-image"
+          objectFit="cover"
+        />
+      </Box>
+
+      {/* ---------------------- For Mobile Screen(768px) ---------------------------- */}
+      <Box
+        position="absolute"
+        bottom="0"
+        display={["none", "block", "block", "none", "none", "none"]}
+      >
+        <Image
+          src="/img/hero-bottom_lines-768.png"
+          alt="bottom lines-image"
+          objectFit="cover"
+        />
+      </Box>
+
+      {/* ---------------------- For Mobile Screen(390px) ---------------------------- */}
+      <Box
+        position="absolute"
+        bottom="0"
+        display={["block", "none", "none", "none", "none", "none"]}
+      >
+        <Image
+          src="/img/hero-bottom_lines-390.png"
+          alt="bottom lines-image"
+          objectFit="cover"
+        />
+      </Box>
     </Box>
   );
 };

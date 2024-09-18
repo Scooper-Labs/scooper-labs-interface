@@ -1,3 +1,6 @@
+import { ReactNode } from "react";
+import { ContainerProps, PopoverProps } from "@chakra-ui/react";
+
 export type FooterLink = {
   title: string;
   links: {
