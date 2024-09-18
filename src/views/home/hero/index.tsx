@@ -95,7 +95,11 @@ const HeroSection = () => {
           alignItems="center"
           justifyContent="center"
           textAlign="center"
+          pos={"relative"}
         >
+          <Box pos={"absolute"} top={-40}>
+            <Image src="/img/section-one/stars.svg" w={"inherit"} alt="stars" />
+          </Box>
           {/* ----------------------- Scooper Labs Logo ----------------------- */}
           <Box>
             <Image

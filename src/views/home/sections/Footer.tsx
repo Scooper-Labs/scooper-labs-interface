@@ -90,8 +90,9 @@ const Footer = () => {
               ))}
 
               <HStack mt="56px">
-                {icons.map(({ href, icon }) => (
+                {icons.map(({ href, icon }, index) => (
                   <Box
+                    key={index}
                     fontSize={["32px", "32px", "32px", "44px", "44px"]}
                     gap={20}
                     color="secondaryGray.500"

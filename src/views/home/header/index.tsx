@@ -59,7 +59,8 @@ const LandingHeader = () => {
         alignItems="center"
         height={{ base: "56px", md: "52px" }}
         padding={{ base: "12px", md: "10px 12px" }}
-        backgroundColor="transparent"
+        // backgroundColor="transparent"
+        // filter={"hue-rotate(90deg)"}
       >
         <HStack
           display={["none", "none", "none", "flex", "flex", "flex", "flex"]}
@@ -73,9 +74,13 @@ const LandingHeader = () => {
                 py={2}
                 fontWeight={500}
                 fontSize="16px"
-                color="white"
+                bg={"white"}
+                bgClip={"text"}
+                color="transparent"
                 // blendMode="difference"
-                mixBlendMode="difference"
+                // mixBlendMode="difference"
+                bgBlendMode={"difference"}
+                // filter={"hue-rotate(90deg)"}
                 style={{ textDecoration: "none" }}
               >
                 {name}

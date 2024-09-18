@@ -3,10 +3,11 @@
 import { Box } from "@chakra-ui/react";
 
 import HeroSection from "./hero";
-// import SectionOne from "./sections/SectionOne";
-// import SectionTwo from "./sections/SectionTwo";
-import SectionThree from "./sections/SectionThree";
 import LandingHeader from "./header";
+
+import SectionOne from "./sections/SectionOne";
+import SectionTwo from "./sections/SectionTwo";
+import SectionThree from "./sections/SectionThree";
 import Footer from "./sections/Footer";
 
 export default function HomeView() {
@@ -15,9 +16,8 @@ export default function HomeView() {
       <LandingHeader />
       <HeroSection />
 
-      {/*  
       <SectionOne />
-      <SectionTwo /> */}
+      <SectionTwo />
       <SectionThree />
 
       <Footer />
