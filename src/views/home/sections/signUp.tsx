@@ -47,16 +47,16 @@ export default function FooterSignup() {
           color="secondaryGray.700"
           borderWidth={0}
         />
-        <InputRightElement width="4.5rem">
+        <InputRightElement>
           <Button
             type="submit"
             mt="32px"
-            mr="40px"
             w={["94px", "94px", "143px", "143px", "143px"]}
             height="56px"
             color="#FEFBFB"
             _hover={{ bg: "#002EE9" }}
             position="absolute"
+            right={2}
             bg="#002EE9"
             borderRadius="8px"
             px="25px"

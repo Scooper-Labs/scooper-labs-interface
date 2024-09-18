@@ -33,19 +33,19 @@ const SectionTwo = () => {
         alignItems="flex-start"
         textAlign="left"
         width={"100%"}
-        gap={24}
+        gap={{ md: 12, lg: 24, base: 24 }}
       >
         <Heading
           color="#002EE9"
           fontWeight={400}
-          fontSize="124px"
+          fontSize={{ md: "60px", lg: "124px" }}
           fontFamily="Adineue-pro"
           textAlign="left"
         >
           Our Products
         </Heading>
 
-        <Box className="space-y-8" width={"inherit"}>
+        <Box className="" width={"inherit"}>
           <Flex direction={"row"} wrap={"nowrap"} gap={8}>
             <Box position="relative" className="" flexGrow={"1"}>
               <Image
@@ -90,13 +90,13 @@ const SectionTwo = () => {
             direction={"row"}
             wrap={"nowrap"}
             gap={8}
-            mt={"10rem"}
+            mt={{ md: "4rem", lg: "10rem" }}
             pr={"2rem"}
           >
             <Box width={"50%"}>
               <Box
                 width={"100%"}
-                height={"474px"}
+                height={{ base: "424px", md: "204.15px", lg: "424px" }}
                 border={"2px dashed blue"}
                 borderRadius={"10px"}
               ></Box>
@@ -112,7 +112,7 @@ const SectionTwo = () => {
       {/* </ContainerWrapper> */}
 
       {/* -------------------- Fixed Bottom Image ---------------------- */}
-      <Box mt="200px" marginLeft={"auto"}>
+      <Box mt={{ md: "120px", lg: "200px" }} ml={"auto"} mr={"-80px"}>
         <Image
           src="/img/checkered-box.png"
           alt="checkered box"

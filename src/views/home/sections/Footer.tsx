@@ -165,8 +165,8 @@ const Footer = () => {
         </Stack>
 
         <Stack
-          direction={["column", "column", "column", "row", "row"]}
-          spacing={3}
+          direction={["column", "column", "column", "column", "row"]}
+          spacing={[3, 3, 3, 12, 12]}
           alignItems={["flex-start", "flex-start", "flex-start", "", "center"]}
           justifyContent="space-between"
           mt={["32px", "32px", "32px", "108px", "108px"]}
