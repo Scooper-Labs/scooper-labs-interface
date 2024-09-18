@@ -31,7 +31,7 @@ const LandingHeader = () => {
     },
     {
       name: "Our Why",
-      link: "#why",
+      link: "#ourwhy",
     },
     {
       name: "Blog",
@@ -62,7 +62,9 @@ const LandingHeader = () => {
         // backgroundColor="transparent"
         // filter={"hue-rotate(90deg)"}
       >
-        <HStack display={{ base: "none", md: "none", lg: "flex" }}>
+        <HStack
+          display={["none", "none", "none", "flex", "flex", "flex", "flex"]}
+        >
           {navLinks.map(({ name, link }, i) => (
             <React.Fragment key={i}>
               <ChakraLink

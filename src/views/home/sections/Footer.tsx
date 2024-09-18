@@ -3,11 +3,8 @@ import {
   Stack,
   HStack,
   VStack,
-  Divider,
   Image,
   Text,
-  Button,
-  IconButton,
   LinkProps,
   Flex,
   Link as ChakraLink,
@@ -69,23 +66,20 @@ const Footer = () => {
       flexDir="column"
       color="white"
       pt="56px"
-      // py="10px"
-      // px="10px"
       marginInline="auto"
     >
-      <ContainerWrapper>
+      <ContainerWrapper px="2%">
         <Stack
-          // spacing={{ base: 8, md: 0 }}
           justifyContent="space-between"
           direction={["column", "column", "column", "row", "row"]}
         >
           <Box>
-            <Flex as="div" flexDir="column" alignItems={"flex-start"}>
+            <Flex as="div" flexDir="column" alignItems={"flex-start"} gap={3}>
               {["AssetScooper", "BlockRepo", "Blog"].map((item) => (
                 <Text
                   key={item}
                   fontFamily="Minecraft"
-                  fontSize={["32px", "56px", "56px", "56px", "120px"]}
+                  fontSize={["32px", "32px", "32px", "56px", "56px", "120px"]}
                   color="secondaryGray.500"
                   lineHeight="1"
                   _hover={{ color: "white" }}
@@ -162,7 +156,9 @@ const Footer = () => {
                 Misc
               </Text>
               <VStack alignItems="flex-start" color="gray.500">
-                <CustomLink href="#">Send us a mail</CustomLink>
+                <CustomLink href="mailto:assetscooper@gmail.com?subject=How can we help you today?">
+                  Send us a mail
+                </CustomLink>
               </VStack>
             </VStack>
           </HStack>

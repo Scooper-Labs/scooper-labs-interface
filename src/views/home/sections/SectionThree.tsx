@@ -24,25 +24,29 @@ const SectionThree = () => {
       color="#0D0D0F"
       py="10px"
       px="10px"
-      pt=""
+      pt="50px"
     >
       <ContainerWrapper>
-        <Flex
-          as="div"
-          flexDir="column"
-          alignItems="flex-start"
-          textAlign="left"
-        >
+        <Flex as="div" flexDir="column" alignItems="flex-start">
+          {/* --------------- Illustration Boxes (to-the-left*****) --------------- */}
+          <Box position="absolute" top="-5" left="0">
+            <Image
+              src="/img/Boxes.png"
+              alt="Boxes"
+              objectFit="cover"
+              boxSize={["50px", "50px", "55px", "55px", "90px", "90px", "90px"]}
+            />
+          </Box>
           <Heading
             color="#002EE9"
             fontWeight={400}
-            fontSize="124px"
+            fontSize={["60px", "60px", "60px", "60px", "124px"]}
             fontFamily="Adineue-pro"
-            textAlign="left"
+            textAlign={["center", "center", "center", "left", "left", "left"]}
           >
-            Answering
+            Answering the Why
           </Heading>
-          <Heading
+          {/* <Heading
             color="#002EE9"
             fontWeight={400}
             fontSize="124px"
@@ -50,18 +54,18 @@ const SectionThree = () => {
             textAlign="left"
           >
             the Why
-          </Heading>
+          </Heading> */}
 
-          <Box fontSize="20px" mt="5rem">
-            <Flex
-              direction={"column"}
-              gap={8}
-              mr={"10rem"}
-              fontWeight={"medium"}
-            >
-              <Text mb={4}>
+          <Box
+            fontSize={["14px", "14px", "16px", "16px", "18px", "20px"]}
+            maxW="800px"
+            mt="20px"
+            textAlign={"left"}
+          >
+            <Flex flexDir="column">
+              <Text mb="48px">
                 Satoshi Nakamoto in one of his posts in 2009 said,{" "}
-                <Text as="i" color="#002EE9" fontWeight={"normal"}>
+                <Text as="i" color="#002EE9">
                   “The root problem with conventional currency is all the trust
                   that's required to make it work. The central bank must be
                   trusted not to debase the currency, but the history of fiat
@@ -69,7 +73,7 @@ const SectionThree = () => {
                 </Text>
               </Text>
 
-              <Text mb={4}>
+              <Text mb="48px">
                 In 2023 alone, we saw the second biggest bank collapse in the
                 history of the United States behind the 2008 global recession.
                 That same year, we saw the collapse of four other relatively big
@@ -78,7 +82,7 @@ const SectionThree = () => {
                 unprecedented levels of strain.
               </Text>
 
-              <Text mb={4}>
+              <Text mb="48px">
                 As builders, we have seen how blockchain technology has
                 transformed the lives of hundreds of thousands of people. We
                 have seen the promise of blockchain not only in code but in its
@@ -87,7 +91,7 @@ const SectionThree = () => {
                 that thrives on shared trust.
               </Text>
 
-              <Text mb={4}>
+              <Text mb="48px">
                 We build to bring this reality to the wider web, to show people
                 that their money, their property, their livelihood can be
                 changed by blockchain innovation and that real human progress
@@ -98,10 +102,49 @@ const SectionThree = () => {
             </Flex>
           </Box>
 
-          <Box position="absolute" right="0" bottom={40}>
+          {/* ---------------------- For Mobile Screen ---------------------------- */}
+          <Box>
+            <Box
+              position="absolute"
+              right="0"
+              bottom={2}
+              display={["block", "block", "block", "none", "none", "none"]}
+            >
+              <Image
+                src="/img/section-4-stars.svg"
+                alt="stars"
+                objectFit="cover"
+                width="132.16px"
+                height="53.93px"
+              />
+            </Box>
+
+            <Box
+              position="absolute"
+              right="0"
+              bottom={0}
+              display={["block", "block", "block", "none", "none", "none"]}
+            >
+              <Image
+                src="/img/star-ship-2.png"
+                alt="star ship"
+                objectFit="cover"
+                width="122.16px"
+                height="53.93px"
+              />
+            </Box>
+          </Box>
+
+          <Box
+            position="absolute"
+            right="20"
+            top="65%"
+            transform="translateY(-50%)"
+            display={["none", "none", "none", "block", "block", "block"]}
+          >
             <Image
-              src="/img/star-ship-2.png"
-              alt="star ship"
+              src="/img/section-4-stars.svg"
+              alt="stars"
               objectFit="cover"
               width="122px"
               height="53.85px"
@@ -109,7 +152,12 @@ const SectionThree = () => {
             />
           </Box>
 
-          {/* <Box position="absolute" right="0" bottom={0}>
+          <Box
+            position="absolute"
+            right="0"
+            bottom={0}
+            display={["none", "none", "none", "block", "block", "block"]}
+          >
             <Image
               src="/img/star-ship-2.png"
               alt="star ship"
@@ -117,16 +165,40 @@ const SectionThree = () => {
               width="156.16px"
               height="68.93px"
             />
-          </Box> */}
+          </Box>
         </Flex>
       </ContainerWrapper>
 
       {/* -------------------- Fixed Bottom Image ---------------------- */}
-      <Box mt="-200px">
+      <Box
+        display={["none", "none", "none", "none", "block", "block", "block"]}
+      >
         <Image
-          src="/img/poly-ground.svg"
+          src={"/img/poly-ground.svg"}
           alt="bottom illustration"
           objectFit="cover"
+        />
+      </Box>
+
+      {/* ---------------------- For Mobile Screen(768px*****) ---------------------------- */}
+      <Box display={["none", "none", "none", "block", "none", "none", "none"]}>
+        <Image
+          src="/img/poly-ground-768.svg"
+          alt="star ship"
+          objectFit="cover"
+          width="156.16px"
+          height="68.93px"
+        />
+      </Box>
+
+      {/* ---------------------- For Mobile Screen(390px*****) ---------------------------- */}
+      <Box
+        display={["block", "block", "block", "none", "none", "none", "none"]}
+      >
+        <Image
+          src="/img/poly-ground-390.png"
+          alt="star ship"
+          objectFit="inherit"
         />
       </Box>
     </Box>
