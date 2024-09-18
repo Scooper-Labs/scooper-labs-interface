@@ -24,6 +24,27 @@ const HeroSection = () => {
       py="10px"
       px="10px"
     >
+      <Box pos={"absolute"} top={0} left={0}>
+        <Image
+          src="/img/section-one/top-left-cube.svg"
+          w={"inherit"}
+          alt="top-right-cube logo"
+        />
+      </Box>
+      <Box pos={"absolute"} top={0} right={0}>
+        <Image
+          src="/img/section-one/top-right-cube.svg"
+          w={"inherit"}
+          alt="top left cube logo"
+        />
+      </Box>
+      <Box pos={"absolute"} bottom={0} width={"100%"}>
+        <Image
+          src="/img/section-one-lines.svg"
+          w={"inherit"}
+          alt="asset scooper lines"
+        />
+      </Box>
       <ContainerWrapper>
         <Flex
           as="div"
