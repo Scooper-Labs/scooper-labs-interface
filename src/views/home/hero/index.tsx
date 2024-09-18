@@ -23,10 +23,37 @@ const HeroSection = () => {
       color="white"
       pt={{ base: "125px", md: "135px", lg: "135px" }}
     >
+      {/* Top Left Cube */}
+      <Box pos={"absolute"} top={0} left={0}>
+        <Image
+          src="/img/section-one/top-left-cube.svg"
+          w={"inherit"}
+          alt="top right cube"
+        />
+      </Box>
+
+      {/* Top Right Cube */}
+      <Box pos={"absolute"} top={0} right={0}>
+        <Image
+          src="/img/section-one/top-right-cube.svg"
+          w={"inherit"}
+          alt="top left cube"
+        />
+      </Box>
+
+      {/* Home Page Cyan Lines */}
+      <Box pos={"absolute"} bottom={0} width={"100%"}>
+        <Image
+          src="/img/section-one-lines.svg"
+          w={"inherit"}
+          alt="asset scooper lines"
+        />
+      </Box>
+
       {/* ------------ Top Ilustation is here ---------------- */}
       <Box>
         {/* --------------------- To-the-Left --------------------- */}
-        <Box
+        {/* <Box
           position="absolute"
           top="0"
           left="0"
@@ -35,10 +62,9 @@ const HeroSection = () => {
           <Image
             src="/img/top-left-cube.png"
             alt="left-cube illustration"
-            objectFit="cover"
-            width="210px"
+            width="inherit"
           />
-        </Box>
+        </Box> */}
 
         {/* --------------------- To-the-Left (Mobile screen***** 390px) --------------------- */}
         <Box
@@ -50,14 +76,14 @@ const HeroSection = () => {
           <Image
             src="/img/top-left-cube.png"
             alt="left-cube illustration"
-            objectFit="cover"
+            // objectFit="cover"
             width="157.5px"
             height="86.25px"
           />
         </Box>
 
         {/* --------------------- To-the-Right --------------------- */}
-        <Box
+        {/* <Box
           position="absolute"
           top="0"
           right="0"
@@ -69,7 +95,7 @@ const HeroSection = () => {
             objectFit="cover"
             width="210px"
           />
-        </Box>
+        </Box> */}
 
         {/* --------------------- To-the-Left (Mobile screen***** 390px) --------------------- */}
         <Box
