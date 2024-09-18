@@ -62,7 +62,7 @@ const SectionThree = () => {
             mt="20px"
             textAlign={"left"}
           >
-            <Flex>
+            <Flex flexDir="column">
               <Text mb="48px">
                 Satoshi Nakamoto in one of his posts in 2009 said,{" "}
                 <Text as="i" color="#002EE9">
@@ -152,7 +152,7 @@ const SectionThree = () => {
             />
           </Box>
 
-          {/* <Box
+          <Box
             position="absolute"
             right="0"
             bottom={0}
@@ -165,7 +165,7 @@ const SectionThree = () => {
               width="156.16px"
               height="68.93px"
             />
-          </Box> */}
+          </Box>
         </Flex>
       </ContainerWrapper>
 
