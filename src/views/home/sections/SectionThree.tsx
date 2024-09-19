@@ -186,8 +186,10 @@ const SectionThree = () => {
           src="/img/poly-ground-768.svg"
           alt="star ship"
           objectFit="cover"
-          width="156.16px"
-          height="68.93px"
+          // width="156.16px"
+          // height="68.93px"
+          // bg="purple"
+          mt={"-200px"}
         />
       </Box>
 
