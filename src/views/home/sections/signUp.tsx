@@ -12,7 +12,7 @@ export default function FooterSignup() {
   const [email, setEmail] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit: React.FormEventHandler<HTMLElement> = (e) => {
     e.preventDefault();
 
     setIsLoading(true);
