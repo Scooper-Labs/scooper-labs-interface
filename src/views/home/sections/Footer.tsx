@@ -111,19 +111,66 @@ const Footer = () => {
           </Box>
 
           <HStack
-            spacing={["24px", "24px", "24px", "20", "20"]}
+            spacing={["24px", "24px", "24px", "20", "2"]}
             alignItems="flex-start"
             justifyContent={[
               "flex-start",
               "flex-start",
               "flex-start",
               "",
-              "flex-end",
+              "flex-start",
             ]}
             flexWrap="wrap"
-            mt={["48px", "48px", "48px", "0px", "0px"]}
+            mt={["48px", "48px", "48px", "16px", "48px"]}
+            px={["24px", "24px", "24px", "0px", "24px"]}
+            // bg={"orange"}
           >
-            <Box display={["flex"]} flexDirection="column" gap={"56px"}>
+            <Flex
+              direction={{ md: "column", lg: "row" }}
+              flexFlow={"nowrap"}
+              justifyContent={"flex-start"}
+              gap={"56px"}
+            >
+              <VStack spacing={4} alignItems="flex-start">
+                <Text fontFamily="Adineue-pro" fontSize="md" fontWeight="700">
+                  Building
+                </Text>
+                <VStack spacing={2} alignItems="flex-start" color="gray.500">
+                  <CustomLink href="#">Building a dapp?</CustomLink>
+                  <CustomLink href="#">Building a website?</CustomLink>
+                </VStack>
+              </VStack>
+
+              <VStack display={["flex"]} spacing={4} alignItems="flex-start">
+                <Text fontFamily="Adineue-pro" fontSize="md" fontWeight="700">
+                  Misc
+                </Text>
+                <VStack alignItems="flex-start" color="gray.500">
+                  <CustomLink href="mailto:assetscooper@gmail.com?subject=How can we help you today?">
+                    Send us a mail
+                  </CustomLink>
+                </VStack>
+              </VStack>
+            </Flex>
+
+            <VStack
+              spacing={6}
+              alignItems="flex-start"
+              mt={["-24px", "-24px", "-24px", "0px", "0px"]}
+              display={{ md: "none", lg: "flex" }}
+            >
+              <Text fontFamily="Adineue-pro" fontSize="md" fontWeight="700">
+                Company
+              </Text>
+              <VStack spacing={2} alignItems="flex-start" color="gray.500">
+                <CustomLink href="#">Contribute</CustomLink>
+                <CustomLink href="#">Media assets</CustomLink>
+                <CustomLink href="#">Give Feedback</CustomLink>
+                <CustomLink href="#">Brand Assets</CustomLink>
+              </VStack>
+            </VStack>
+
+            {/* <Box display={["flex"]} flexDirection="column" gap={"56px"}>
               <VStack spacing={4} alignItems="flex-start">
                 <Text fontFamily="Adineue-pro" fontSize="md" fontWeight="700">
                   Building
@@ -160,16 +207,33 @@ const Footer = () => {
                   Send us a mail
                 </CustomLink>
               </VStack>
-            </VStack>
+            </VStack> */}
           </HStack>
         </Stack>
+
+        <VStack
+          spacing={6}
+          alignItems="flex-start"
+          mt={["24px", "24px", "24px", "40px", "24px"]}
+          display={{ md: "flex", lg: "none" }}
+        >
+          <Text fontFamily="Adineue-pro" fontSize="md" fontWeight="700">
+            Company
+          </Text>
+          <VStack spacing={2} alignItems="flex-start" color="gray.500">
+            <CustomLink href="#">Contribute</CustomLink>
+            <CustomLink href="#">Media assets</CustomLink>
+            <CustomLink href="#">Give Feedback</CustomLink>
+            <CustomLink href="#">Brand Assets</CustomLink>
+          </VStack>
+        </VStack>
 
         <Stack
           direction={["column", "column", "column", "column", "row"]}
           spacing={[3, 3, 3, 12, 12]}
           alignItems={["flex-start", "flex-start", "flex-start", "", "center"]}
           justifyContent="space-between"
-          mt={["32px", "32px", "32px", "108px", "108px"]}
+          mt={["32px", "32px", "32px", "32px", "108px"]}
           mb="44px"
         >
           <>
@@ -185,7 +249,7 @@ const Footer = () => {
                 />
               </Box>
               <Text
-                textAlign={["left", "left", "left", "end"]}
+                textAlign={["left", "left", "left", "left", "end"]}
                 fontWeight={500}
                 color="secondaryGray.500"
               >

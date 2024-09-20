@@ -53,3 +53,21 @@ a {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes animCirleBrush {
+  0% {
+    transform: rotate(0deg) scale(1.0, 1.0);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(0.5, 0.5);
+  }
+}
+
+.green-circle-brush {
+  position: relative;
+  display: block;
+  animation: animCircleBrush 5s linear 2s alternate infinite;
+  /* border: 2px solid rosybrown */
+  /* transform: scale(0.5, 0.5); */
+}

@@ -128,11 +128,37 @@ const HeroSection = () => {
           </Box>
           {/* ----------------------- Scooper Labs Logo ----------------------- */}
           <Box>
-            <Image
+            {/* <Image
               src="/img/scooper-labs-logo.png"
               w={"208px"}
               alt="assetscooper logo"
-            />
+            /> */}
+            <Text
+              fontSize={"36px"}
+              fontWeight={"bold"}
+              style={{ fontWeight: "bold" }}
+            >
+              <Flex direction={"row"} alignItems={"center"} gap={0.8}>
+                Sc{" "}
+                <span>
+                  <Image
+                    src="/img/section-one/green-circle-brush.svg"
+                    w={"18px"}
+                    alt="assetscooper logo"
+                    className={"green-circle-brush"}
+                    mt={"8px"}
+                  />
+                </span>
+                <Image
+                  src="/img/section-one/green-circle-brush.svg"
+                  w={"18px"}
+                  alt="assetscooper logo"
+                  className={"green-circle-brush"}
+                  mt={"8px"}
+                />
+                per Labs
+              </Flex>
+            </Text>
           </Box>
 
           <Text mt="16px" fontSize="20px" fontWeight={500}>
