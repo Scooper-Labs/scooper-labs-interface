@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
 import {
   Box,
   Link as ChakraLink,
@@ -23,15 +22,15 @@ const LandingHeader = () => {
     },
     {
       name: "The Mission",
-      link: "#mission",
+      link: "#TheMission",
     },
     {
       name: "Products",
-      link: "#products",
+      link: "#OurProducts",
     },
     {
       name: "Our Why",
-      link: "#ourwhy",
+      link: "#OurWhy",
     },
     {
       name: "Blog",
@@ -43,13 +42,14 @@ const LandingHeader = () => {
 
   return (
     <Box
-      position="fixed"
+      position="sticky"
+      top={0}
       width="100vw"
       zIndex="40"
       display="flex"
       justifyContent="center"
       alignItems="center"
-      pt={6}
+      pt="32px"
       px={4}
     >
       <Flex
@@ -59,32 +59,33 @@ const LandingHeader = () => {
         alignItems="center"
         height={{ base: "56px", md: "52px" }}
         padding={{ base: "12px", md: "10px 12px" }}
-        // backgroundColor="transparent"
-        // filter={"hue-rotate(90deg)"}
       >
-        <HStack
-          display={["none", "none", "none", "flex", "flex", "flex", "flex"]}
-        >
+        <HStack display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}>
           {navLinks.map(({ name, link }, i) => (
             <React.Fragment key={i}>
-              <ChakraLink
-                href={link}
-                target={link.startsWith("http") ? "_blank" : "_self"}
-                px={2}
-                py={2}
-                fontWeight={500}
-                fontSize="16px"
-                bg={"white"}
-                bgClip={"text"}
-                color="transparent"
-                // blendMode="difference"
-                // mixBlendMode="difference"
-                bgBlendMode={"difference"}
-                // filter={"hue-rotate(90deg)"}
-                style={{ textDecoration: "none" }}
-              >
-                {name}
-              </ChakraLink>
+              <Box position="relative" overflow="hidden">
+                <ChakraLink
+                  href={link}
+                  target={link.startsWith("http") ? "_blank" : "_self"}
+                  px={2}
+                  py={2}
+                  fontWeight={500}
+                  fontSize="16px"
+                  color="white" // Set to white for best contrast
+                  sx={{
+                    mixBlendMode: "difference",
+                    transition: "color 0.3s ease", // Smooth transition for color changes
+                  }}
+                  _hover={{
+                    textDecoration: "none",
+                    "&::before": {
+                      background: "gray.200",
+                    },
+                  }}
+                >
+                  {name}
+                </ChakraLink>
+              </Box>
               {i < navLinks.length - 1 && (
                 <Circle bgColor="brandPrimary.100" size="3px" mx={2} />
               )}

@@ -9,7 +9,6 @@ import {
   Flex,
   Link as ChakraLink,
 } from "@chakra-ui/react";
-import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import { PiLinkedinLogoBold } from "react-icons/pi";
@@ -56,8 +55,6 @@ const CustomLink = ({
 
 const Footer = () => {
   return (
-    // <Box p={{ base: 5, md: 8 }}marginInline="auto">
-
     <Box
       as="section"
       id="footer"
@@ -68,7 +65,7 @@ const Footer = () => {
       pt="56px"
       marginInline="auto"
     >
-      <ContainerWrapper px="2%">
+      <ContainerWrapper>
         <Stack
           justifyContent="space-between"
           direction={["column", "column", "column", "row", "row"]}
@@ -156,7 +153,7 @@ const Footer = () => {
             <VStack
               spacing={6}
               alignItems="flex-start"
-              mt={["-24px", "-24px", "-24px", "0px", "0px"]}
+              mt={{ base: "0px", sm: "0px", md: "0px", lg: "-56px" }}
               display={{ md: "none", lg: "flex" }}
             >
               <Text fontFamily="Adineue-pro" fontSize="md" fontWeight="700">
@@ -169,45 +166,6 @@ const Footer = () => {
                 <CustomLink href="#">Brand Assets</CustomLink>
               </VStack>
             </VStack>
-
-            {/* <Box display={["flex"]} flexDirection="column" gap={"56px"}>
-              <VStack spacing={4} alignItems="flex-start">
-                <Text fontFamily="Adineue-pro" fontSize="md" fontWeight="700">
-                  Building
-                </Text>
-                <VStack spacing={2} alignItems="flex-start" color="gray.500">
-                  <CustomLink href="#">Building a dapp?</CustomLink>
-                  <CustomLink href="#">Building a website?</CustomLink>
-                </VStack>
-              </VStack>
-
-              <VStack
-                spacing={4}
-                alignItems="flex-start"
-                mt={["-24px", "-24px", "-24px", "0px", "0px"]}
-              >
-                <Text fontFamily="Adineue-pro" fontSize="md" fontWeight="700">
-                  Company
-                </Text>
-                <VStack spacing={2} alignItems="flex-start" color="gray.500">
-                  <CustomLink href="#">Contribute</CustomLink>
-                  <CustomLink href="#">Media assets</CustomLink>
-                  <CustomLink href="#">Give Feedback</CustomLink>
-                  <CustomLink href="#">Brand Assets</CustomLink>
-                </VStack>
-              </VStack>
-            </Box>
-
-            <VStack display={["flex"]} spacing={4} alignItems="flex-start">
-              <Text fontFamily="Adineue-pro" fontSize="md" fontWeight="700">
-                Misc
-              </Text>
-              <VStack alignItems="flex-start" color="gray.500">
-                <CustomLink href="mailto:assetscooper@gmail.com?subject=How can we help you today?">
-                  Send us a mail
-                </CustomLink>
-              </VStack>
-            </VStack> */}
           </HStack>
         </Stack>
 
@@ -215,7 +173,7 @@ const Footer = () => {
           spacing={6}
           alignItems="flex-start"
           mt={["24px", "24px", "24px", "40px", "24px"]}
-          display={{ md: "flex", lg: "none" }}
+          display={{ base: "none", sm: "none", md: "flex", lg: "none" }}
         >
           <Text fontFamily="Adineue-pro" fontSize="md" fontWeight="700">
             Company

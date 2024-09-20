@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Input,
   Flex,
@@ -11,17 +10,23 @@ import { useState } from "react";
 
 export default function FooterSignup() {
   const [email, setEmail] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    // Handle your email submission logic here, e.g., sending to an API
-    console.log("Submitted email:", email);
-    // Reset the email state if needed
-    // setEmail("");
+
+    setIsLoading(true);
+
+    // Redirect to Paragraph.xyz subscription page after a short delay
+    const subscribeUrl = `https://paragraph.xyz/@assetscooper/subscribe`;
+
+    setTimeout(() => {
+      window.location.href = subscribeUrl;
+    }, 1000);
   };
 
   return (
-    <Flex flexDir="column">
+    <Flex flexDir="column" as="form" onSubmit={handleSubmit}>
       <Text fontFamily="Adineue-pro" fontSize="18px" fontWeight="700">
         Subscribe to our Newsletter
       </Text>
@@ -62,8 +67,10 @@ export default function FooterSignup() {
             px="25px"
             fontWeight={400}
             alignSelf="center"
+            isLoading={isLoading}
+            loadingText="Redirecting..."
           >
-            Submit
+            Subscribe
           </Button>
         </InputRightElement>
       </InputGroup>

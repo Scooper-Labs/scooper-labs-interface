@@ -1,11 +1,37 @@
 import React from "react";
-import { Box, Image, Text, Flex, HStack } from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  Text,
+  Flex,
+  HStack,
+  useBreakpointValue,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import ContainerWrapper from "@/components/ContainerWrapper";
 
+const MotionBox = motion.div;
+
 const HeroSection = () => {
+  const fixedBottomImage = useBreakpointValue({
+    base: "/img/hero-bottom_lines-390.png",
+    sm: "/img/hero-bottom_lines-768.png",
+    md: "/img/hero-bottom_lines.png",
+    lg: "/img/hero-bottom_lines-1920.png",
+  });
+
   const scooperProductsLogos = [
-    { src: "/img/assetscooper-logo.png", alt: "assetscooper logo" },
-    { src: "/img/blockrepo-logo.png", alt: "blockrepo logo" },
+    {
+      src: "/img/assetscooper-logo.png",
+      alt: "assetscooper logo",
+      href: "https://assetscooper.xyz",
+    },
+    {
+      src: "/img/blockrepo-logo.png",
+      alt: "blockrepo logo",
+      href: "https://x.com/BlockRepo",
+    },
     { src: "", alt: "placeholder" },
     { src: "", alt: "placeholder" },
   ];
@@ -23,8 +49,13 @@ const HeroSection = () => {
       color="white"
       pt={{ base: "125px", md: "135px", lg: "135px" }}
     >
+      {/* ------------ Top Ilustation is here ---------------- */}
       {/* Top Left Cube */}
-      <Box pos={"absolute"} top={0} left={0}>
+      <Box
+        pos={"absolute"}
+        top={{ base: "-10%", sm: "-10%", md: "-8%", lg: "-13%" }}
+        left={0}
+      >
         <Image
           src="/img/section-one/top-left-cube.svg"
           w={"inherit"}
@@ -33,7 +64,11 @@ const HeroSection = () => {
       </Box>
 
       {/* Top Right Cube */}
-      <Box pos={"absolute"} top={0} right={0}>
+      <Box
+        pos={"absolute"}
+        top={{ base: "6%", sm: "6%", md: "-8%", lg: "-13%" }}
+        right={0}
+      >
         <Image
           src="/img/section-one/top-right-cube.svg"
           w={"inherit"}
@@ -41,80 +76,7 @@ const HeroSection = () => {
         />
       </Box>
 
-      {/* Home Page Cyan Lines */}
-      <Box pos={"absolute"} bottom={0} width={"100%"}>
-        <Image
-          src="/img/section-one-lines.svg"
-          w={"inherit"}
-          alt="asset scooper lines"
-        />
-      </Box>
-
-      {/* ------------ Top Ilustation is here ---------------- */}
-      <Box>
-        {/* --------------------- To-the-Left --------------------- */}
-        {/* <Box
-          position="absolute"
-          top="0"
-          left="0"
-          display={["none", "none", "none", "block", "block", "block", "block"]}
-        >
-          <Image
-            src="/img/top-left-cube.png"
-            alt="left-cube illustration"
-            width="inherit"
-          />
-        </Box> */}
-
-        {/* --------------------- To-the-Left (Mobile screen***** 390px) --------------------- */}
-        <Box
-          position="absolute"
-          top="0"
-          left="0"
-          display={["block", "block", "block", "none", "none", "none", "none"]}
-        >
-          <Image
-            src="/img/top-left-cube.png"
-            alt="left-cube illustration"
-            // objectFit="cover"
-            width="157.5px"
-            height="86.25px"
-          />
-        </Box>
-
-        {/* --------------------- To-the-Right --------------------- */}
-        {/* <Box
-          position="absolute"
-          top="0"
-          right="0"
-          display={["none", "none", "none", "block", "block", "block", "block"]}
-        >
-          <Image
-            src="/img/top_right-light-green-cube.png"
-            alt="green-cube illustration"
-            objectFit="cover"
-            width="210px"
-          />
-        </Box> */}
-
-        {/* --------------------- To-the-Left (Mobile screen***** 390px) --------------------- */}
-        <Box
-          position="absolute"
-          top="28"
-          right="0"
-          display={["block", "block", "block", "none", "none", "none", "none"]}
-        >
-          <Image
-            src="/img/top-right-cube.png"
-            alt="green-cube illustration"
-            objectFit="inherit"
-            width="157.5px"
-            height="130.47px"
-          />
-        </Box>
-      </Box>
-
-      <ContainerWrapper px="5%">
+      <ContainerWrapper>
         <Flex
           as="div"
           flexDir="column"
@@ -123,42 +85,54 @@ const HeroSection = () => {
           textAlign="center"
           pos={"relative"}
         >
-          <Box pos={"absolute"} top={-40}>
+          {/* --------------------- Star illustration ------------------ */}
+          <Box
+            pos={"absolute"}
+            right={"35%"}
+            top={-20}
+            display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}
+          >
             <Image src="/img/section-one/stars.svg" w={"inherit"} alt="stars" />
           </Box>
+
           {/* ----------------------- Scooper Labs Logo ----------------------- */}
           <Box>
-            {/* <Image
-              src="/img/scooper-labs-logo.png"
-              w={"208px"}
-              alt="assetscooper logo"
-            /> */}
-            <Text
-              fontSize={"36px"}
-              fontWeight={"bold"}
-              style={{ fontWeight: "bold" }}
-            >
-              <Flex direction={"row"} alignItems={"center"} gap={0.8}>
-                Sc{" "}
-                <span>
-                  <Image
-                    src="/img/section-one/green-circle-brush.svg"
-                    w={"18px"}
-                    alt="assetscooper logo"
-                    className={"green-circle-brush"}
-                    mt={"8px"}
-                  />
-                </span>
+            <HStack fontSize="36px" fontWeight={800} gap={0.8}>
+              <Text as="span">Sc</Text>
+              <MotionBox
+                animate={{ rotate: 360 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 10,
+                  ease: "linear",
+                }}
+                style={{ transformOrigin: "center", gap: "0.7" }}
+              >
                 <Image
                   src="/img/section-one/green-circle-brush.svg"
-                  w={"18px"}
+                  w="18px"
                   alt="assetscooper logo"
-                  className={"green-circle-brush"}
-                  mt={"8px"}
+                  className="green-circle-brush"
                 />
-                per Labs
-              </Flex>
-            </Text>
+              </MotionBox>
+              <MotionBox
+                animate={{ rotate: -360 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 10,
+                  ease: "linear",
+                }}
+                style={{ transformOrigin: "center" }}
+              >
+                <Image
+                  src="/img/section-one/green-circle-brush.svg"
+                  w="18px"
+                  alt="assetscooper logo"
+                  className="green-circle-brush"
+                />
+              </MotionBox>
+              <Text as="span"> per Labs</Text>
+            </HStack>
           </Box>
 
           <Text mt="16px" fontSize="20px" fontWeight={500}>
@@ -174,7 +148,9 @@ const HeroSection = () => {
             {scooperProductsLogos.map((logo, i) => (
               <Box key={i} w="60px" h="60px">
                 {logo.src ? (
-                  <Image src={logo.src} w="60px" alt={logo.alt} />
+                  <ChakraLink href={logo.href || "#"} isExternal>
+                    <Image src={logo.src} w="60px" alt={logo.alt} />
+                  </ChakraLink>
                 ) : (
                   <Box
                     borderRadius="8px"
@@ -191,43 +167,13 @@ const HeroSection = () => {
           </HStack>
         </Flex>
       </ContainerWrapper>
-
       {/* -------------------- Fixed Bottom Image ---------------------- */}
-      <Box
-        position="absolute"
-        bottom="0"
-        display={["none", "none", "none", "block", "block", "block"]}
-      >
+      <Box position="absolute" bottom="0">
         <Image
-          src="/img/hero-bottom_lines.png"
+          src={fixedBottomImage}
           alt="bottom lines-image"
           objectFit="cover"
-        />
-      </Box>
-
-      {/* ---------------------- For Mobile Screen(768px) ---------------------------- */}
-      <Box
-        position="absolute"
-        bottom="0"
-        display={["none", "block", "block", "none", "none", "none"]}
-      >
-        <Image
-          src="/img/hero-bottom_lines-768.png"
-          alt="bottom lines-image"
-          objectFit="cover"
-        />
-      </Box>
-
-      {/* ---------------------- For Mobile Screen(390px) ---------------------------- */}
-      <Box
-        position="absolute"
-        bottom="0"
-        display={["block", "none", "none", "none", "none", "none"]}
-      >
-        <Image
-          src="/img/hero-bottom_lines-390.png"
-          alt="bottom lines-image"
-          objectFit="cover"
+          w="inherit"
         />
       </Box>
     </Box>
