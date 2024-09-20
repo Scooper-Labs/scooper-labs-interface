@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ContainerProps, PopoverProps } from "@chakra-ui/react";
+import { ContainerProps } from "@chakra-ui/react";
 
 export type FooterLink = {
   title: string;
@@ -12,6 +12,10 @@ export type FooterLink = {
 export interface LinksProps {
   name: string;
   link: string;
+}
+
+export interface ProvidersProps {
+  children: ReactNode;
 }
 
 export interface ContainerWrapperProps extends Partial<ContainerProps> {

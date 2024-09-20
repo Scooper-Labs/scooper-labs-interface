@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  HStack,
-  Grid,
-  Text,
-  Heading,
-  chakra,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, Text, Heading, Image } from "@chakra-ui/react";
 import Link from "next/link";
 import ContainerWrapper from "@/components/ContainerWrapper";
 
