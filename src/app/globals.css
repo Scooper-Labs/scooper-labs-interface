@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Adineue-Pro";
-  src: url("./fonts//Adineue/adineue-pro.otf");
+  src: url("./fonts/Adineue/adineue-pro.otf");
   font-weight: 400;
   font-style: normal;
 }
@@ -23,7 +23,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Aeonik", sans-serif;
-  color: "white";
   background: "#0d0d0f";
 }
 
@@ -36,6 +35,13 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.blend-mode-link {
+  color: white;
+  mix-blend-mode: difference;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .scroll-hero-text {
@@ -56,7 +62,7 @@ html {
 
 @keyframes animCirleBrush {
   0% {
-    transform: rotate(0deg) scale(1.0, 1.0);
+    transform: rotate(0deg) scale(1, 1);
   }
 
   100% {

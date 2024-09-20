@@ -3,18 +3,44 @@ import {
   Box,
   Flex,
   HStack,
+  Grid,
   Text,
   Heading,
   chakra,
   Image,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import ContainerWrapper from "@/components/ContainerWrapper";
+
+const products = [
+  {
+    src: "/img/asset-scooper-product.png",
+    alt: "Asset Scooper Product",
+    title: "AssetScooper",
+    description: "Aggregate and sweep multiple assets in a single transaction.",
+    link: "https://x.com/assetscooper.xyz",
+  },
+  {
+    src: "/img/blockrepo-product.png",
+    alt: "Base Repo Product",
+    title: "BaseRepo",
+    description: "Bringing 10,000 developers into the base ecosystem.",
+    link: "https://x.com/BlockRepo",
+  },
+  {
+    src: "", // Empty image
+    alt: "Base repo product",
+    title: "Coming Soon",
+    description: "", // Empty description
+    link: "", // Empty link,
+  },
+];
 
 const SectionTwo = () => {
   return (
     <Box
       as="section"
-      id="ourproducts"
+      id="OurProducts"
       position="relative"
       display="flex"
       bg="white"
@@ -22,97 +48,122 @@ const SectionTwo = () => {
       justifyContent="center"
       flexDir="column"
       color="#0D0D0F"
-      py="10px"
-      px="80px"
-      pt=""
+      px="54px"
     >
-      {/* <ContainerWrapper> */}
-      <Flex
-        as="div"
-        flexDir="column"
-        alignItems="flex-start"
-        textAlign="left"
-        width={"100%"}
-        gap={{ md: 12, lg: 24, base: 24 }}
-      >
-        <Heading
-          color="#002EE9"
-          fontWeight={400}
-          fontSize={{ md: "60px", lg: "124px" }}
-          fontFamily="Adineue-pro"
+      <ContainerWrapper>
+        <Flex
+          as="div"
+          flexDir="column"
+          alignItems="flex-start"
           textAlign="left"
+          width={"100%"}
+          gap={{ base: "48px", sm: "48px", md: "64px", lg: "80px" }}
         >
-          Our Products
-        </Heading>
+          {/* --------------- Illustration Boxes (to-the-left*****) --------------- */}
+          <Box position="absolute" top="-5" left="0">
+            <Image
+              src="/img/Boxes.png"
+              alt="Boxes"
+              objectFit="cover"
+              boxSize={{
+                base: "50px",
+                sm: "50px",
+                md: "55px",
+                lg: "90px",
+                xl: "90px",
+              }}
+            />
+          </Box>
 
-        <Box className="" width={"inherit"}>
-          <Flex direction={"row"} wrap={"nowrap"} gap={8}>
-            <Box position="relative" className="" flexGrow={"1"}>
-              <Image
-                src="/img/asset-scooper-product.png"
-                alt="Asset scooper product"
-                objectFit="cover"
-                width="100%"
-                // height="100%"
-                borderRadius={"10px"}
-                // transform={"rotateX(-30.34deg)"}
-              />
-              <Box className="space-y-4">
-                <Text color="#002EE9" fontWeight={"bold"} fontSize={"36px"}>
-                  AssetScooper
-                </Text>
-                <Text color="#002EE9" fontWeight={"normal"} fontSize={"16px"}>
-                  Aggregate and sweep multiple assets in a single transaction.
-                </Text>
-              </Box>
-            </Box>
-            <Box position="relative" className="" flexGrow={"1"}>
-              <Image
-                src="/img/blockrepo-product.png"
-                alt="Base repo product"
-                objectFit="cover"
-                width="100%"
-                // height="100%"
-                borderRadius={"10px"}
-                // transform={"rotateX(-30.34deg)"}
-              />
-              <Box className="space-y-4">
-                <Text color="#002EE9" fontWeight={"bold"} fontSize={"36px"}>
-                  BaseRepo
-                </Text>
-                <Text color="#002EE9" fontWeight={"normal"} fontSize={"16px"}>
-                  Bringing 10,000 developers into the base ecosystem
-                </Text>
-              </Box>
-            </Box>
-          </Flex>
-          <Flex
-            direction={"row"}
-            wrap={"nowrap"}
-            gap={8}
-            mt={{ md: "4rem", lg: "10rem" }}
-            pr={"2rem"}
+          <Heading
+            pt="20px"
+            color="#002EE9"
+            fontWeight={400}
+            fontSize={{ base: "60px", sm: "60px", md: "60px", lg: "124px" }}
+            fontFamily="Adineue-pro"
+            textAlign={{ base: "center", sm: "center", md: "left", lg: "left" }}
           >
-            <Box width={"50%"}>
-              <Box
-                width={"100%"}
-                height={{ base: "424px", md: "204.15px", lg: "424px" }}
-                border={"2px dashed blue"}
-                borderRadius={"10px"}
-              ></Box>
-              <Box className="space-y-4">
-                <Text color="#002EE9" fontWeight={"bold"} fontSize={"36px"}>
-                  Coming Soon
-                </Text>
-              </Box>
-            </Box>
-          </Flex>
-        </Box>
-      </Flex>
-      {/* </ContainerWrapper> */}
+            Our Products
+          </Heading>
 
-      {/* -------------------- Fixed Bottom Image ---------------------- */}
-      <Box mt={{ md: "120px", lg: "200px" }} ml={"auto"} mr={"-80px"}>
+          <Box width={"inherit"} pb="220px">
+            <Grid
+              templateColumns={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(2, 1fr)",
+              }}
+              gap={8}
+            >
+              {products.map((product, i) => (
+                <Box key={i} position="relative" borderRadius="8px">
+                  <Link href={product.link} target="_blank" passHref>
+                    {product.src ? (
+                      <Image
+                        src={product.src}
+                        alt={product.alt}
+                        objectFit="cover"
+                        width="100%"
+                      />
+                    ) : (
+                      <Box
+                        height={{
+                          base: "224px",
+                          sm: "224px",
+                          md: "204.148px",
+                          lg: "424px",
+                          xl: "565px",
+                        }}
+                        mt={{
+                          base: "0px",
+                          sm: "0px",
+                          md: "48px",
+                          lg: "80px",
+                          xl: "80px",
+                        }}
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        border="2px dashed #002EE9"
+                        bg="transparent"
+                        borderRadius="8px"
+                      ></Box>
+                    )}
+                  </Link>
+                  <Box className="space-y-4" marginTop={4}>
+                    <Link href={product.link} target="_blank" passHref>
+                      <Text
+                        color="#002EE9"
+                        fontWeight={500}
+                        fontStyle="normal"
+                        fontSize={"36px"}
+                      >
+                        {product.title || "Coming Soon"}
+                      </Text>
+                    </Link>
+                    <Text
+                      color="#002EE9"
+                      fontWeight={400}
+                      fontStyle="normal"
+                      fontSize={"16px"}
+                    >
+                      {product.description || ""}
+                    </Text>
+                  </Box>
+                </Box>
+              ))}
+            </Grid>
+          </Box>
+        </Flex>
+      </ContainerWrapper>
+
+      {/* -------------------- Fixed Bottom Image (***Desktop and Tablet***) ---------------------- */}
+      <Box
+        position="absolute"
+        right="0"
+        bottom={0}
+        display={{ base: "none", sm: "none", md: "block", lg: "block" }}
+      >
         <Image
           src="/img/checkered-box.png"
           alt="checkered box"
@@ -121,6 +172,20 @@ const SectionTwo = () => {
           height={"190px"}
         />
       </Box>
+
+      {/* -------------------- Fixed Bottom Image (***Mobile***) ---------------------- */}
+      <Flex
+        alignItems="center"
+        justifyContent="center"
+        display={{ base: "block", sm: "block", md: "none", lg: "none" }}
+      >
+        <Image
+          src="/img/mobile-Checkered-box.png"
+          alt="checkered box"
+          objectFit="cover"
+          width={"100%"}
+        />
+      </Flex>
     </Box>
   );
 };
