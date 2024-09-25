@@ -13,7 +13,7 @@ const products = [
   },
   {
     src: "/img/blockrepo-product.png",
-    alt: "Base Repo Product",
+    alt: "Block Repo Product",
     title: "BaseRepo",
     description: "Bringing 10,000 developers into the base ecosystem.",
     link: "https://x.com/BlockRepo",
@@ -102,8 +102,8 @@ const SectionTwo = () => {
                           base: "224px",
                           sm: "224px",
                           md: "204.148px",
-                          lg: "424px",
-                          xl: "565px",
+                          lg: "224px",
+                          xl: "324px",
                         }}
                         mt={{
                           base: "0px",
@@ -125,7 +125,7 @@ const SectionTwo = () => {
                     <Link href={product.link} target="_blank" passHref>
                       <Text
                         color="#002EE9"
-                        fontWeight={500}
+                        fontWeight={700}
                         fontStyle="normal"
                         fontSize={"36px"}
                       >

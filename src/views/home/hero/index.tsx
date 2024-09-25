@@ -97,7 +97,7 @@ const HeroSection = () => {
 
           {/* ----------------------- Scooper Labs Logo ----------------------- */}
           <Box>
-            <HStack fontSize="36px" fontWeight={800} gap={0.8}>
+            <HStack fontSize="36px" fontWeight={900} gap={0.8}>
               <Text as="span">Sc</Text>
               <MotionBox
                 animate={{ rotate: 360 }}

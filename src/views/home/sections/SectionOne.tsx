@@ -45,24 +45,6 @@ const SectionOne = () => {
       overflow="hidden"
       minH="100vh"
     >
-      {/* Background Video - (***fixed***) */}
-      <Box
-        as="video"
-        autoPlay
-        muted
-        loop
-        playsInline
-        src="/img/light-burst.mp4"
-        poster="/img/light-burst.mp4"
-        position="absolute"
-        top="0"
-        left="0"
-        width="100%"
-        height="100%"
-        objectFit="cover"
-        zIndex="0"
-      />
-
       {/* ------------------ Image Overlay --------------- */}
       <Box>
         <Image
@@ -74,10 +56,29 @@ const SectionOne = () => {
           width="100%"
           height="100%"
           objectFit="cover"
-          zIndex="1"
-          opacity="0.8"
+          zIndex="2"
+          // opacity="6"
         />
       </Box>
+
+      {/* Background Video - (***fixed***) */}
+      <Box
+        as="video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        src="/img/light-burst.mp4"
+        poster="/img/light-burst.mp4"
+        position="absolute"
+        top="0"
+        bottom="80"
+        left="0"
+        width="100%"
+        height="100%"
+        objectFit="cover"
+        zIndex="0"
+      />
 
       {/* --------------------- For Mobile Screen --------------------- */}
       <Flex
@@ -112,6 +113,7 @@ const SectionOne = () => {
               fontFamily="Adineue-pro"
               textAlign="left"
               padding="8px"
+              borderRadius="0px 8px 8px 0px"
             >
               The Mission
             </Heading>
@@ -163,10 +165,9 @@ const SectionOne = () => {
               fill="none"
             >
               <path
-                d="M0 0H1115V126.5C1115 130.918 1111.42 134.5 1107 134.5H1016.5C1012.08 134.5 1008.5 138.082 1008.5 142.5V179C1008.5 183.418 1004.92 187 1000.5 187H0V0Z"
+                d="M8 0H1107C1111.42 0 1115 3.58 1115 8V126.5C1115 130.918 1111.42 134.5 1107 134.5H1016.5C1012.08 134.5 1008.5 138.082 1008.5 142.5V179C1008.5 183.418 1004.92 187 1000.5 187H8C3.58 187 0 183.42 0 179V8C0 3.58 3.58 0 8 0Z"
                 fill="#00FF38"
               />
-
               <text
                 x="40"
                 y="60"
@@ -203,7 +204,6 @@ const SectionOne = () => {
                 d="M0.0427796 8.04256C0.01919 3.60772 3.60776 0 8.04267 0H581C585.418 0 589 3.58172 589 8V59.5C589 63.9183 585.418 67.5 581 67.5H379.652C375.175 67.5 371.569 71.1744 371.654 75.6509L371.846 85.8491C371.931 90.3256 368.325 94 363.848 94H8.45755C4.05588 94 0.481086 90.4442 0.457673 86.0425L0.0427796 8.04256Z"
                 fill="#00FF38"
               />
-
               <text
                 x="40"
                 y="30"
