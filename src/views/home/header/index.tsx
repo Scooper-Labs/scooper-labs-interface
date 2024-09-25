@@ -51,6 +51,7 @@ const LandingHeader = () => {
       alignItems="center"
       pt="32px"
       px={4}
+      mixBlendMode="difference"
     >
       <Flex
         as="div"
@@ -60,10 +61,17 @@ const LandingHeader = () => {
         height={{ base: "56px", md: "52px" }}
         padding={{ base: "12px", md: "10px 12px" }}
       >
-        <HStack display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}>
+        <HStack
+          display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}
+          zIndex={9999}
+        >
           {navLinks.map(({ name, link }, i) => (
             <React.Fragment key={i}>
-              <Box position="relative" overflow="hidden">
+              <Box
+                position="relative"
+                overflow="hidden"
+                mixBlendMode="difference"
+              >
                 <ChakraLink
                   href={link}
                   target={link.startsWith("http") ? "_blank" : "_self"}
@@ -72,16 +80,6 @@ const LandingHeader = () => {
                   fontWeight={500}
                   fontSize="16px"
                   color="white" // Set to white for best contrast
-                  sx={{
-                    mixBlendMode: "difference",
-                    transition: "color 0.3s ease", // Smooth transition for color changes
-                  }}
-                  _hover={{
-                    textDecoration: "none",
-                    "&::before": {
-                      background: "gray.200",
-                    },
-                  }}
                 >
                   {name}
                 </ChakraLink>
