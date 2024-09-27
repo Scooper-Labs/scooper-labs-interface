@@ -15,10 +15,10 @@ const MotionBox = motion.div;
 
 const HeroSection = () => {
   const fixedBottomImage = useBreakpointValue({
-    base: "/img/hero-bottom_lines-390.png",
-    sm: "/img/hero-bottom_lines-768.png",
-    md: "/img/hero-bottom_lines.png",
-    lg: "/img/hero-bottom_lines-1920.png",
+    base: "/img/hero-bottom_lines-390.svg",
+    sm: "/img/hero-bottom_lines-768.svg",
+    md: "/img/hero-bottom_lines.svg",
+    lg: "/img/hero-bottom_lines-1920.svg",
   });
 
   const scooperProductsLogos = [
@@ -56,11 +56,7 @@ const HeroSection = () => {
         top={{ base: "-10%", sm: "-10%", md: "-8%", lg: "-13%" }}
         left={0}
       >
-        <Image
-          src="/img/section-one/top-left-cube.svg"
-          w={"inherit"}
-          alt="top right cube"
-        />
+        <Image src="/img/top-left-cube.svg" w={"inherit"} alt="top left cube" />
       </Box>
 
       {/* Top Right Cube */}
@@ -70,7 +66,7 @@ const HeroSection = () => {
         right={0}
       >
         <Image
-          src="/img/section-one/top-right-cube.svg"
+          src="/img/top-right-cube.svg"
           w={"inherit"}
           alt="top left cube"
         />

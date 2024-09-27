@@ -53,7 +53,7 @@ const SectionTwo = () => {
           {/* --------------- Illustration Boxes (to-the-left*****) --------------- */}
           <Box position="absolute" top="-5" left="0">
             <Image
-              src="/img/Boxes.png"
+              src="/img/Boxes.svg"
               alt="Boxes"
               objectFit="cover"
               boxSize={{
@@ -156,7 +156,7 @@ const SectionTwo = () => {
         display={{ base: "none", sm: "none", md: "block", lg: "block" }}
       >
         <Image
-          src="/img/checkered-box.png"
+          src="/img/checkered-box.svg"
           alt="checkered box"
           objectFit="cover"
           width={"480px"}
@@ -171,7 +171,7 @@ const SectionTwo = () => {
         display={{ base: "block", sm: "block", md: "none", lg: "none" }}
       >
         <Image
-          src="/img/mobile-Checkered-box.png"
+          src="/img/mobile-Checkered-box.svg"
           alt="checkered box"
           objectFit="cover"
           width={"100%"}

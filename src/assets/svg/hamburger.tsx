@@ -30,7 +30,7 @@ const Hamburger: React.FC<IHamburgerProps> = ({ isOpen, onClick }) => {
           >
             <Box>
               <Image
-                src="/img/menu-close-btn.png"
+                src="/img/menu-close-btn.svg"
                 w={"32px"}
                 alt="close-menu"
               />
@@ -46,7 +46,7 @@ const Hamburger: React.FC<IHamburgerProps> = ({ isOpen, onClick }) => {
           >
             <Box>
               <Image
-                src="/img/hamburger-menu-btn.png"
+                src="/img/hamburger-menu-btn.svg"
                 w={"32px"}
                 alt="open-menu"
               />

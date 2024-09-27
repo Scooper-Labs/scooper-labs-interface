@@ -21,7 +21,7 @@ const SectionThree = () => {
           {/* --------------- Illustration Boxes (to-the-left*****) --------------- */}
           <Box position="absolute" top="-4" left="9">
             <Image
-              src="/img/Boxes.png"
+              src="/img/Boxes.svg"
               alt="Boxes"
               objectFit="cover"
               boxSize={["50px", "50px", "55px", "55px", "90px", "90px", "90px"]}
@@ -95,7 +95,7 @@ const SectionThree = () => {
                 display={{ base: "none", sm: "none", md: "none", lg: "block" }}
               >
                 <Image
-                  src="/img/star-ship-2.png"
+                  src="/img/star-ship-2.svg"
                   alt="star ship"
                   objectFit="cover"
                   width="156.16px"
@@ -139,7 +139,7 @@ const SectionThree = () => {
                   }}
                 >
                   <Image
-                    src="/img/star-ship-2.png"
+                    src="/img/star-ship-2.svg"
                     alt="star ship"
                     objectFit="cover"
                     width="122.16px"
