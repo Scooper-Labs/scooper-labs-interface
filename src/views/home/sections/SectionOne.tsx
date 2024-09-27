@@ -139,7 +139,7 @@ const SectionOne = () => {
             }}
           >
             <Image
-              src="/img/space-ship-assetscooper.png"
+              src="/img/space-ship-assetscooper.svg"
               alt="spaceship"
               objectFit="cover"
               width={spaceShipWidth}

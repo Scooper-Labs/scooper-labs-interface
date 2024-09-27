@@ -29,7 +29,7 @@ const Menu = ({ menuOpen, setMenuOpen, links }: MenuProps) => {
 
           <Box position="absolute" top="0" left="0">
             <Image
-              src="/img/drawer-side-lines.png"
+              src="/img/drawer-side-lines.svg"
               alt="side illustration"
               objectFit="cover"
             />
@@ -38,7 +38,7 @@ const Menu = ({ menuOpen, setMenuOpen, links }: MenuProps) => {
           {/* --------------------- To-the-Top (Mobile screen***** 390px) --------------------- */}
           <Box position="absolute" top="0" left="10" zIndex={-1}>
             <Image
-              src="/img/top-left-cube-side.png"
+              src="/img/top-left-cube-side.svg"
               alt="top cube illustration"
               objectFit="cover"
               width="157.5px"
@@ -49,7 +49,7 @@ const Menu = ({ menuOpen, setMenuOpen, links }: MenuProps) => {
           {/* --------------------- To-the-Bottom (Mobile screen***** 390px) --------------------- */}
           <Box position="absolute" bottom="0" zIndex={-1}>
             <Image
-              src="/img/bottom-left-cube.png"
+              src="/img/bottom-left-cube.svg"
               alt="bottom cube illustration"
               objectFit="inherit"
               width="157.5px"
